@@ -5,12 +5,19 @@ import tseslint from "typescript-eslint";
 
 export default [
   {
-    languageOptions: {
-      globals: globals.browser
-    },
-    ignores: ["**/node_modules/", ".dist/"],
+    languageOptions: { globals: globals.browser },
+    extends: [
+      "eslint:recommended",
+      "plugin:@typescript-eslint/recommended",
+      "prettier"
+    ],
+    ignores: [
+      "**/node_modules/",
+      ".dist/"
+    ],
     rules: {
       "no-unused-vars": "error",
+      "semi": "warning",
       "prefer-const": "error",
       "no-unused-expressions": "error",
       "no-console": "warning",
