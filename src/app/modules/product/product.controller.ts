@@ -21,6 +21,26 @@ const GetProducts = async (req: Request, res: Response, next: NextFunction) => {
     }
 };
 
+const GetProductById = async (req: Request, res: Response, next: NextFunction) => {
+    try {
+        const { productId } = req.params;
+
+        const result = await ProductServices.fetchProductById(productId)
+
+        res.status(200).json({
+            success: true,
+            message: "Products fetched successfully!",
+            data: result
+        })
+    } catch (error: any) {
+        res.status(500).json({
+            success: false,
+            message: "Products fetching failed",
+            error: error.message
+        })
+    }
+};
+
 const PostProduct = async (req: Request, res: Response, next: NextFunction) => {
     try {
         const product = req.body;
@@ -41,10 +61,34 @@ const PostProduct = async (req: Request, res: Response, next: NextFunction) => {
             error: error.message
         })
     }
-}
+};
+
+
+
+const ProductDeleteById = async (req: Request, res: Response, next: NextFunction) => {
+    try {
+        const { productId } = req.params;
+
+        const result = await ProductServices.deleteProductById(productId)
+
+        res.status(200).json({
+            success: true,
+            message: "Product deleted successfully!",
+            data: null
+        })
+    } catch (error: any) {
+        res.status(500).json({
+            success: false,
+            message: "Products fetching failed",
+            error: error.message
+        })
+    }
+};
 
 
 export const ProductController = {
     GetProducts,
-    PostProduct
+    PostProduct,
+    GetProductById,
+    ProductDeleteById
 }
