@@ -13,7 +13,7 @@ const GetProducts = async (req: Request, res: Response, next: NextFunction) => {
             data: result
         })
     } catch (error: any) {
-        res.status(200).json({
+        res.status(500).json({
             success: false,
             message: "Products fetching failed",
             error: error.message
@@ -21,7 +21,30 @@ const GetProducts = async (req: Request, res: Response, next: NextFunction) => {
     }
 };
 
+const PostProduct = async (req: Request, res: Response, next: NextFunction) => {
+    try {
+        const product = req.body;
+
+        console.log(product);
+
+        const result = await ProductServices.createProduct(product);
+
+        res.status(200).json({
+            success: true,
+            message: "Product created successfully!",
+            data: result
+        })
+    } catch (error: any) {
+        res.status(500).json({
+            success: false,
+            message: "Products creation failed",
+            error: error.message
+        })
+    }
+}
+
 
 export const ProductController = {
-    GetProducts
+    GetProducts,
+    PostProduct
 }

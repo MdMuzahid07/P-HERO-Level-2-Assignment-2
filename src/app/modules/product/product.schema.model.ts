@@ -1,4 +1,4 @@
-import mongoose, { model } from "mongoose"
+import mongoose from "mongoose"
 import { InventoryT, ProductT, VariantT } from "./product.infterface";
 
 
@@ -12,19 +12,17 @@ const ProductInventory = new mongoose.Schema<InventoryT>({
         type: Number,
         required: [true, "product quantity must be added"]
     },
-    isStock: {
+    inStock: {
         type: Boolean,
         required: [true, "please add an boolean value for Stock indication"]
     }
 })
-
 
 const ProductSchema = new mongoose.Schema<ProductT>({
     name: {
         type: String,
         required: [true, "product name must be added"],
         trim: true,
-        maxlength: [100, "product name cannot be more than 100 character"]
     },
     description: {
         type: String,
@@ -33,7 +31,6 @@ const ProductSchema = new mongoose.Schema<ProductT>({
     price: {
         type: Number,
         required: [true, "product can't be free, please add a price"],
-        maxlength: [12, "price cannot more than 12 digits"]
     },
     category: {
         type: String,

@@ -6,7 +6,7 @@ interface VariantT {
 
 interface InventoryT {
     quantity: number,
-    isStock: boolean
+    inStock: boolean
 }
 
 interface ProductT {
@@ -15,7 +15,7 @@ interface ProductT {
     price: number,
     category: string,
     tags: string[],
-    variants: VariantT[],
+    variants: VariantT,
     inventory: InventoryT
 }
 
