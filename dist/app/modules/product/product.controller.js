@@ -11,6 +11,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.ProductController = void 0;
 const product_service_1 = require("./product.service");
+const product_validator_1 = require("./product.validator");
 const GetProducts = (req, res, next) => __awaiter(void 0, void 0, void 0, function* () {
     try {
         const searchTerm = req.query.searchTerm;
@@ -61,7 +62,8 @@ const PostProduct = (req, res, next) => __awaiter(void 0, void 0, void 0, functi
     try {
         const product = req.body;
         console.log(product);
-        const result = yield product_service_1.ProductServices.createProduct(product);
+        const ValidatedProduct = product_validator_1.ProductValidationSchema.parse(product);
+        const result = yield product_service_1.ProductServices.createProduct(ValidatedProduct);
         res.status(200).json({
             success: true,
             message: "Product created successfully!",
