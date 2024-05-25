@@ -1,5 +1,5 @@
 import mongoose from "mongoose";
-import { InventoryT, ProductT, VariantT } from "./product.infterface";
+import { InventoryT, ProductT, VariantT } from "./product.interface";
 
 const ProductVariant = new mongoose.Schema<VariantT>({
   type: String,
