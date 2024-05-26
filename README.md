@@ -46,9 +46,7 @@ Production mode:<br>
 ##Bash<br>
 
 # yarn build<br>
-# node ./dist/app.js<br>
-# Use code with caution.<br>
-# content_copy<br>
+
 
 This builds the application in production mode and then starts it. The built code is placed in the dist directory.<br>
 
