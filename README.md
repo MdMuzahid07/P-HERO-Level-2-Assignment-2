@@ -1,64 +1,65 @@
 #[P-HERO-Level-2-Assignment-2]
-- A Node.js Backend Application
+- A Node.js Backend Application<br>
 
-This repository contains the source code for a backend application built with Express.js, Mongoose, MongoDB, TypeScript, as the main technologies.
+This repository contains the source code for a backend application built with Express.js, Mongoose, MongoDB, TypeScript, as the main technologies.<br>
 
-## Features
+## Features<br>
 
-Robust data management: Leverages Mongoose for seamless interaction with MongoDB, ensuring efficient data storage and retrieval.
+Robust data management: Leverages Mongoose for seamless interaction with MongoDB, ensuring efficient data storage and retrieval<br>.
 
-Type safety: Enforces type checks through TypeScript, enhancing code reliability and maintainability.
+Type safety: Enforces type checks through TypeScript, enhancing code reliability and maintainability.<br>
 
 
-## Getting Started
+## Getting Started<br>
 
-Prerequisites:
+Prerequisites:<br>
 
 Node.js and npm (or Yarn) are installed on your system. You can download them from the official Node.js website: https://nodejs.org/en
-A MongoDB instance running locally or remotely.
-Installation:
+A MongoDB instance running locally or remotely.<br>
+Installation:<br>
 
-Clone this repository:
+Clone this repository:<br>
 
-Bash
-git clone https://github.com/MdMuzahid07/P-HERO-Level-2-Assignment-2.git
+##Bash<br>
 
-Use code with caution.
-content_copy
-Navigate to the project directory:
+1. git clone https://github.com/MdMuzahid07/P-HERO-Level-2-Assignment-2.git<br>
 
-Bash
-#yarn install
+2. Navigate to the project directory:<br>
 
+##Bash<br>
 
-There are two ways to run the application:
-
-Development mode (hot reloading):
-
-Bash
-yarn start-dev
+#yarn install<br>
 
 
-This starts the application in development mode, enabling hot reloading whenever you make changes to the source code.
+There are two ways to run the application:<br>
 
-Production mode:
+Development mode (hot reloading):<br>
 
-##Bash
-#yarn build
-#node ./dist/app.js
-#Use code with caution.
-#content_copy
+Bash<br>
+yarn start-dev<br>
 
-This builds the application in production mode and then starts it. The built code is placed in the dist directory.
 
-## Scripts
+This starts the application in development mode, enabling hot reloading whenever you make changes to the source code.<br>
 
-The package.json file defines various scripts to automate tasks:
+Production mode:<br>
 
-#start: Starts the application in production mode. <br>
-#start-dev: Starts the application in development mode with hot reloading. <br>
-#lint: Runs ESLint to check for code style and potential errors. <br>
-#build: Builds the application for production using TypeScript. <br>
-#lint-fix: Automatically fixes linting errors using ESLint. <br>
-#prettier: Formats code using Prettier. <br>
-#prettier-fix: Automatically formats code using Prettier. <br>
+##Bash<br>
+
+# yarn build<br>
+# node ./dist/app.js<br>
+# Use code with caution.<br>
+# content_copy<br>
+
+This builds the application in production mode and then starts it. The built code is placed in the dist directory.<br>
+
+## Scripts<br>
+
+The package.json file defines various scripts to automate tasks:<br>
+
+# start: Starts the application in production mode. <br>
+# start-dev: Starts the application in development mode with hot reloading. <br>
+# lint: Runs ESLint to check for code style and potential errors. <br>
+# build: Builds the application for production using TypeScript. <br>
+# lint-fix: Automatically fixes linting errors using ESLint. <br>
+# prettier: Formats code using Prettier. <br>
+# prettier-fix: Automatically formats code using Prettier. <br>
