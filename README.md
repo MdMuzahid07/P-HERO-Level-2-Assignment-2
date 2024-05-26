@@ -55,10 +55,10 @@ This builds the application in production mode and then starts it. The built cod
 
 The package.json file defines various scripts to automate tasks:
 
-#start: Starts the application in production mode.
-#start-dev: Starts the application in development mode with hot #reloading.
-#lint: Runs ESLint to check for code style and potential errors.
-#build: Builds the application for production using TypeScript.
-#lint-fix: Automatically fixes linting errors using ESLint.
-#prettier: Formats code using Prettier.
-#prettier-fix: Automatically formats code using Prettier.
+#start: Starts the application in production mode. <br>
+#start-dev: Starts the application in development mode with hot reloading. <br>
+#lint: Runs ESLint to check for code style and potential errors. <br>
+#build: Builds the application for production using TypeScript. <br>
+#lint-fix: Automatically fixes linting errors using ESLint. <br>
+#prettier: Formats code using Prettier. <br>
+#prettier-fix: Automatically formats code using Prettier. <br>
